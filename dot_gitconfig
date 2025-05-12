@@ -1,0 +1,48 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Matteo Tanzi
+	email = matteo.beatstanzi@gmail.com
+
+[core]
+    	editor = nvim
+    	autocrlf = input
+    	excludesfile = ~/.gitignore_global
+	templatesPath = ~/.git-templates
+	compression = 9
+	whitespace = error
+	preloadindex = true
+[url "https://github.com/MatteoTanziCodes/"]
+	insteadOf = "tae:"
+[url "https://github.com/"]
+	insteadOf = "gitH:"
+[push]
+	autoSetupRemote = true
+	default = current
+[pull]
+	default = current
+[alias]
+	s = status
+	c = checkout
+	a = add .
+	sh = push
+	ul = pull
+	l = log
+	i = init
+	cl = clone
+    	b = branch
+    	cm = commit -m
+    	ca = commit --amend
+    	s = status -sb
+    	last = log -1 HEAD
+    	lg = log --oneline --graph --decorate --all
+    	unstage = reset HEAD --
+    	undo = reset --soft HEAD~1
+    	lga = log --graph --oneline --all --decorate --color
+    	find = log --all --grep=
+
+[http]
+	postBuffer = 524288000

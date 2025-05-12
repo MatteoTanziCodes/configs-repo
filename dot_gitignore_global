@@ -1,0 +1,21 @@
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Env/config
+.env
+.env.*
+
+# Node
+node_modules/
+dist/
+build/
